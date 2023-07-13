@@ -1,5 +1,4 @@
 ﻿using tabuleiro;
-using xadrez;
 
 namespace xadrez
 {
@@ -55,7 +54,7 @@ namespace xadrez
             {
                 mat[pos.linha, pos.coluna] = true;
             }
-            
+
             pos.definirValores(posicao.linha + 2, posicao.coluna + 1);
             while (tab.posicaoValida(pos) && podeMover(pos))
             {
@@ -68,12 +67,11 @@ namespace xadrez
                 mat[pos.linha, pos.coluna] = true;
             }
 
-            pos.definirValores(posicao.linha +1, posicao.coluna - 2);
+            pos.definirValores(posicao.linha + 1, posicao.coluna - 2);
             while (tab.posicaoValida(pos) && podeMover(pos))
             {
                 mat[pos.linha, pos.coluna] = true;
             }
-
 
             return mat;
         }

@@ -1,5 +1,4 @@
 ﻿using tabuleiro;
-using xadrez;
 
 namespace xadrez
 {
@@ -88,7 +87,7 @@ namespace xadrez
                 {
                     break;
                 }
-                pos.linha = pos.linha - 1;
+                pos.definirValores(pos.linha - 1, pos.coluna);
             }
 
             // abaixo
@@ -101,7 +100,7 @@ namespace xadrez
                 {
                     break;
                 }
-                pos.linha = pos.linha + 1;
+                pos.definirValores(pos.linha + 1, pos.coluna);
             }
 
             // direita
@@ -114,7 +113,7 @@ namespace xadrez
                 {
                     break;
                 }
-                pos.coluna = pos.coluna + 1;
+                pos.definirValores(pos.linha, pos.coluna + 1);
             }
 
             // esquerda
@@ -127,7 +126,7 @@ namespace xadrez
                 {
                     break;
                 }
-                pos.coluna = pos.coluna - 1;
+                pos.definirValores(pos.linha, pos.coluna - 1);
             }
 
             return mat;

@@ -1,6 +1,4 @@
-﻿using System.Globalization;
-
-namespace tabuleiro
+﻿namespace tabuleiro
 {
     abstract class Peca
     {
@@ -12,8 +10,8 @@ namespace tabuleiro
         public Peca(Tabuleiro tab, Cor cor)
         {
             this.posicao = null;
-            this.cor = cor;
             this.tab = tab;
+            this.cor = cor;            
             this.qteMovimentos = 0;
         }
 
@@ -50,8 +48,7 @@ namespace tabuleiro
         }
 
         public abstract bool[,] movimentosPossiveis();
-    
-             
+        
     }
 }
 
