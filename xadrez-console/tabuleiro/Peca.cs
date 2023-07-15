@@ -1,7 +1,11 @@
-﻿namespace tabuleiro
+﻿using xadrez_console.tabuleiro;
+using xadrez_console.tabuleiro.Enums;
+
+namespace tabuleiro
 {
     abstract class Peca
     {
+
         public Posicao posicao { get; set; }
         public Cor cor { get; protected set; }
         public int qteMovimentos { get; protected set; }
@@ -11,7 +15,7 @@
         {
             this.posicao = null;
             this.tab = tab;
-            this.cor = cor;            
+            this.cor = cor;
             this.qteMovimentos = 0;
         }
 
@@ -35,7 +39,6 @@
                     if (mat[i, j])
                     {
                         return true;
-
                     }
                 }
             }
@@ -48,8 +51,5 @@
         }
 
         public abstract bool[,] movimentosPossiveis();
-        
     }
 }
-
-

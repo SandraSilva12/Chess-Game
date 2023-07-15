@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using tabuleiro;
 using xadrez;
-
+using xadrez_console.tabuleiro;
+using xadrez_console.tabuleiro.Enums;
 
 namespace xadrez_console
 {
-    internal class Tela
+    class Tela
     {
         public static void imprimirPartida(PartidaDeXadrez partida)
         {
